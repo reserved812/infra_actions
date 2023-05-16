@@ -75,6 +75,6 @@ jobs:
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull reserved812/infra_actions
-          #остановка всех контейнеров
+          # остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 reserved812/infra_actions
